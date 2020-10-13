@@ -12,7 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/maddkot/express-mesto.git"
   },
-  "keywords": ["express", "node"],
+  "keywords": [
+    "express",
+    "node"
+  ],
   "author": "Rengevich Sergei",
   "license": "ISC",
   "bugs": {
@@ -20,12 +23,12 @@
   },
   "homepage": "https://github.com/maddkot/express-mesto#readme",
   "dependencies": {
-    "eslint": "^7.11.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.1",
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
     "nodemon": "^2.0.4"
   }
 }
