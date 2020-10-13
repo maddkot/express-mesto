@@ -3,7 +3,7 @@ const router = require('express').Router();
 const fsPromises = require('fs').promises;
 const path = require('path');
 
-router.get('/cards', (req, res) => {
+router.get('/', (req, res) => {
   fsPromises.readFile(path.join(__dirname, '../data/cards.json'))
     .then((data) => res.send(JSON.parse(data)))
     .catch((err) => {

@@ -7,10 +7,10 @@ const routesCards = require('./routes/cards.js');
 const routersUsers = require('./routes/users.js');
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/', routesCards);
-app.use('/', routersUsers);
+app.use('/cards', routesCards);
+app.use('/users', routersUsers);
 app.use('/*', (req, res) => {
-  res.send({ message: 'Запрашиваемый ресурс не найден' });
+  res.status(404).send({ message: 'Запрашиваемый ресурс не найден' });
 });
 
 app.listen(PORT, () => {

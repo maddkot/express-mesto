@@ -2,7 +2,7 @@
   "name": "express-mesto",
   "version": "1.0.0",
   "description": "`npm run start` — запускает сервер   \r `npm run dev` — запускает сервер с hot-reload",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
@@ -12,8 +12,8 @@
     "type": "git",
     "url": "git+https://github.com/maddkot/express-mesto.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["express", "node"],
+  "author": "Rengevich Sergei",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/maddkot/express-mesto/issues"
