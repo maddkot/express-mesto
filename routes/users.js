@@ -1,30 +1,9 @@
 const router = require('express').Router();
-const fsPromises = require('fs').promises;
-const path = require('path');
 
-router.get('/', (req, res) => {
-  fsPromises.readFile(path.join(__dirname, '../data/users.json'))
-    .then((data) => res.send(JSON.parse(data)));
-});
+const { getUsers, getOneUser, postUser } = require('../controllers/users');
 
-router.get('/:_id', (req, res) => {
-  const { _id } = req.params;
-  fsPromises.readFile(path.join(__dirname, '../data/users.json'))
-    .then((data) => JSON.parse(data))
-    .then((data) => {
-      const userId = data.find((user) => user._id === _id);
-      return userId;
-    })
-    .then((user) => {
-      if (!user) {
-        res.status(404).send({ message: 'Нет пользователя с таким id' });
-        return;
-      }
-      res.send(user);
-    })
-    .catch((err) => {
-      res.status(500).send({ message: `Error: ${err}` });
-    });
-});
+router.get('/', getUsers);
+router.get('/:userId', getOneUser);
+router.post('/', postUser);
 
 module.exports = router;
