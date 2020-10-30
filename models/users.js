@@ -5,17 +5,17 @@ const usersSchema = new moongoose.Schema({
     type: String,
     minlength: 2,
     maxlength: 30,
-    require: true,
+    required: true,
   },
   about: {
     type: String,
     minlength: 2,
     maxlength: 30,
-    require: true,
+    required: true,
   },
   avatar: {
     type: String,
-    require: true,
+    required: true,
     validate: {
       validator(v) {
         return /^((http|https):\/\/)(www\.)?([\w\W\d]{1,})(\.)([a-zA-Z]{1,10})([\w\W\d]{1,})?$/.test(v);
